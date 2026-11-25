@@ -4,7 +4,7 @@ Sitio web de La Casita de Ginger, una pastelería temática de Chillán que hace
 
 ## Enlaces
 
-- Sitio publicado en Netlify: (se agrega al desplegar)
+- Sitio publicado en Netlify: https://casita-de-ginger-chillan.netlify.app
 - Repositorio: https://github.com/Patgsj/la-casita-de-ginger
 
 ## Qué tiene el sitio
