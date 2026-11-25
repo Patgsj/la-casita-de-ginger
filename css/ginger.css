@@ -1,0 +1,468 @@
+/* La Casita de Ginger: ajustes sobre la plantilla Assan Restaurant.
+   Solo usa lo visto en el curso: selectores de id y clase, box model,
+   flex, position, colores, fondos, sombras y hover. No usa recursos externos. */
+
+/* ---------- Fuentes locales ---------- */
+@font-face {
+    font-family: "Poppins";
+    src: url("fuentes/poppins-400.woff2") format("woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("fuentes/poppins-500.woff2") format("woff2");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("fuentes/poppins-600.woff2") format("woff2");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Fraunces";
+    src: url("fuentes/fraunces-600.woff2") format("woff2");
+    font-weight: 600;
+}
+
+/* ---------- Base ---------- */
+body {
+    font-size: 15px;
+    color: #6b4a33;
+}
+h1, h2, h3, h4 {
+    font-family: "Fraunces", serif;
+    color: #5a2d0c;
+    text-transform: none;
+}
+p {
+    color: #6b4a35;
+}
+a {
+    color: #a8561a;
+}
+.mt30 {
+    margin-top: 30px;
+}
+
+/* ---------- Sombras de las tarjetas (las mismas de la página original) ---------- */
+.card,
+.tarjeta,
+.card-image,
+.panel-texto,
+.proximamente,
+.rounded {
+    box-shadow: 0 6px 18px rgba(90, 45, 12, 0.1);
+}
+
+/* ---------- Categorías de productos ---------- */
+#productos .card-image {
+    background-color: #ffffff;
+    border-radius: 8px;
+    text-align: center;
+}
+#productos .card-image h4 {
+    height: 64px;
+    margin: 0;
+    padding: 0 12px;
+    font-size: 18px;
+}
+
+/* ---------- Barra superior ---------- */
+.navbar-brand .logo-cara {
+    width: 52px;
+    height: 52px;
+    margin-right: 10px;
+}
+.navbar-brand .logo {
+    width: 190px;
+    height: auto;
+}
+
+/* ---------- Portada ---------- */
+#home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #3b1d08;
+    background-image: url("../img/ia-banner-portada.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.hero-capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40, 18, 4, 0.55);
+}
+.hero-ginger-texto {
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+.hero-ginger-texto .slider-title {
+    text-transform: none;
+    max-width: 640px;
+    margin-bottom: 20px;
+    font-size: 56px;
+    color: #ffffff;
+}
+.hero-ginger-texto .slider-caption {
+    max-width: 520px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* ---------- Bienvenida ---------- */
+#bienvenida {
+    background-color: #5a2d0c;
+    background-image: url("../img/bienvenida.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.panel-texto {
+    padding: 28px 30px;
+    background-color: #fdf8f0;
+    border-radius: 16px;
+}
+.panel-texto p {
+    color: #5a2d0c;
+}
+
+/* ---------- Tortas (tarjetas, igual que en la Evaluación 2) ---------- */
+#tortas {
+    background-color: #fdf8f0;
+}
+.tortas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.torta {
+    display: flex;
+    flex-direction: column;
+    width: 31.8%;
+    margin-bottom: 24px;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 6px 18px rgba(90, 45, 12, 0.1);
+}
+.torta:hover {
+    box-shadow: 0 12px 30px rgba(90, 45, 12, 0.2);
+}
+.torta-extra {
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #5a2d0c;
+    background-image: url("../img/patrones/patron-claro.svg");
+}
+.torta-extra h4 {
+    margin-bottom: 12px;
+    font-size: 26px;
+    color: #f3cf9f;
+}
+.torta-extra p {
+    margin-bottom: 18px;
+    font-size: 15px;
+    color: #ffffff;
+}
+.torta-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 22px 22px 22px;
+}
+.torta h4 {
+    margin-bottom: 8px;
+    font-size: 21px;
+}
+.torta-info p {
+    margin-bottom: 18px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6b4a35;
+}
+.precios {
+    display: flex;
+    margin: auto 0 0 0;
+}
+.precios div {
+    flex: 1;
+    padding: 9px 6px;
+    text-align: center;
+    background-color: #e4f2e7;
+    border-radius: 16px;
+}
+.precios div:first-child {
+    margin-right: 10px;
+}
+.precios dt {
+    font-size: 12px;
+    color: #15502b;
+}
+.precios dd {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #15502b;
+}
+.table thead th {
+    color: #ffffff;
+    background-color: #5a2d0c;
+    border-color: #5a2d0c;
+}
+.table th,
+.table td {
+    vertical-align: middle;
+}
+.table tbody th {
+    width: 210px;
+}
+.miniatura {
+    margin-right: 8px;
+    vertical-align: middle;
+    border-radius: 8px;
+}
+
+/* ---------- Haz tu pedido (igual que la página original) ---------- */
+#pedidos {
+    color: #f5e6d3;
+    background-color: #5a2d0c;
+    background-image: url("../img/patrones/patron-claro.svg");
+}
+#pedidos h2 {
+    color: #ffffff;
+}
+#pedidos p {
+    max-width: 640px;
+    margin: 0 auto 30px auto;
+    font-size: 17px;
+    color: #f5e6d3;
+}
+
+/* ---------- Fondos de pantalla ---------- */
+#fondos {
+    background-color: #fdf1de;
+    background-image: url("../img/patrones/patron-regalos.svg");
+}
+#fondos .center-title {
+    max-width: 640px;
+    margin: 0 auto 30px auto;
+    padding: 24px 28px;
+    background-color: #fdf8f0;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(90, 45, 12, 0.1);
+}
+#fondos .center-title p {
+    color: #5a2d0c;
+}
+#fondos .fondo p {
+    height: 64px;
+    margin: 10px 0;
+    padding: 6px 12px;
+    background-color: #fdf8f0;
+    border-radius: 10px;
+    color: #5a2d0c;
+    line-height: 1.3;
+}
+.fondo-cel img {
+    width: 140px;
+    border: 4px solid #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(90, 45, 12, 0.1);
+}
+.fondo-pc img {
+    width: 320px;
+    border: 4px solid #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(90, 45, 12, 0.1);
+}
+#fondos .nota {
+    max-width: 640px;
+    margin: 10px auto 0 auto;
+    padding: 8px 14px;
+    background-color: #fdf8f0;
+    border-radius: 10px;
+    color: #5a2d0c;
+}
+
+/* ---------- Experiencia ---------- */
+#experiencia {
+    background-color: #fdf1de;
+    background-image: url("../img/patrones/patron-pinos.svg");
+}
+
+/* ---------- Testimonios ---------- */
+.proximamente {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    font-weight: 600;
+    color: #5a2d0c;
+    background-color: #ffffff;
+    border-radius: 16px;
+}
+
+/* ---------- Pie de página ---------- */
+.footer {
+    color: #e8d6c2;
+    background-color: #3b1d08;
+}
+.footer h4 {
+    color: #ffffff;
+}
+.footer p {
+    color: #e8d6c2;
+}
+.footer a {
+    color: #f0c48f;
+}
+.footer a:hover {
+    color: #ffffff;
+}
+.footer .border-top {
+    border-color: #6b4a33;
+}
+.footer-redes li {
+    margin-bottom: 12px;
+}
+.footer-redes a {
+    display: flex;
+    align-items: center;
+}
+.red-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-right: 12px;
+    background-color: #5a2d0c;
+    border-radius: 50%;
+}
+.footer-redes a:hover .red-icono {
+    background-color: #a8561a;
+}
+.red-icono img {
+    width: 22px;
+    height: 22px;
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 991px) {
+    .torta {
+        width: 48.5%;
+    }
+}
+@media (max-width: 767px) {
+    .torta {
+        width: 100%;
+    }
+    .hero-ginger-texto h1 {
+        font-size: 36px;
+    }
+    .hero-ginger-texto .btn {
+        display: block;
+        margin: 10px 0 0 0;
+    }
+    .fondo-cel img {
+        width: 100px;
+    }
+    .fondo-pc img {
+        width: 100%;
+    }
+    .table tbody th {
+        width: 170px;
+    }
+    #tortas .btn-lg {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+    #fondos .fondo .btn {
+        padding: 4px 6px;
+        font-size: 10px;
+        letter-spacing: 0;
+    }
+}
+
+/* Detalles de las tarjetas de tortas, como en la Evaluación 2 */
+.torta h4 {
+    letter-spacing: 0;
+}
+.torta-extra .btn {
+    border-radius: 100px;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 600;
+    color: #5a2d0c;
+}
+
+/* Tarjetas de misión y visión, como en la Evaluación 2 */
+.tarjeta {
+    padding: 14px 32px 26px 32px;
+    background-color: #fdf8f0;
+    border: 1px solid #f0e4d2;
+    border-radius: 28px;
+}
+.tarjeta h3 {
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+.tarjeta-oscura {
+    color: #ffffff;
+    background-color: #5a2d0c;
+    border-color: #5a2d0c;
+}
+.tarjeta-oscura h3 {
+    color: #f3cf9f;
+}
+.tarjeta-oscura p {
+    color: #ffffff;
+}
+
+/* Menú en celular y tablet.
+   La plantilla original pintaba los enlaces de blanco en móvil (pensado para
+   un fondo oscuro), pero la barra de Ginger es crema: quedaban invisibles. */
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%235a2d0c' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+@media (max-width: 991px) {
+    .navbar.navbar-light.bg-faded .navbar-toggler {
+        top: 6px;
+        right: 0;
+        padding: 6px 10px;
+        background-color: #fdf8f0;
+        border: 1px solid #a8561a;
+        border-radius: 8px;
+    }
+    .navbar.navbar-light.bg-faded .navbar-toggler:focus {
+        outline: 2px solid #a8561a;
+        outline-offset: 2px;
+    }
+    .navbar-collapse {
+        max-height: calc(100vh - 90px);
+        overflow-y: auto;
+        margin-top: 8px;
+        border-top: 1px solid #f0e4d2;
+    }
+    .navbar.navbar-light.bg-faded .navbar-nav .nav-link:not(.btn) {
+        padding: 12px 4px;
+        color: #5a2d0c;
+        border-bottom: 1px solid #f0e4d2;
+    }
+    .navbar.navbar-light.bg-faded .navbar-nav .nav-link:not(.btn):hover,
+    .navbar.navbar-light.bg-faded .navbar-nav .nav-link:not(.btn).active {
+        color: #a8561a;
+    }
+    .navbar.navbar-light.bg-faded .navbar-nav .nav-link.btn {
+        margin: 14px 0 6px 0;
+        text-align: center;
+    }
+}
