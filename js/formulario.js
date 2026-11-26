@@ -67,3 +67,20 @@ formulario.addEventListener("submit", function (evento) {
     }
     resultado.textContent = "Listo, se abrirá tu correo para enviar el mensaje.";
 });
+
+var ayudaMensaje = document.getElementById("ayuda-mensaje");
+var motivoPedido = document.getElementById("motivo-pedido");
+var motivoConsulta = document.getElementById("motivo-consulta");
+var motivoOtro = document.getElementById("motivo-otro");
+
+motivoPedido.addEventListener("change", function () {
+    ayudaMensaje.textContent = "Cuéntanos qué torta quieres, si es para 20 o 30 personas y para qué fecha.";
+});
+
+motivoConsulta.addEventListener("change", function () {
+    ayudaMensaje.textContent = "Escribe tu pregunta sobre nuestros productos y te responderemos pronto.";
+});
+
+motivoOtro.addEventListener("change", function () {
+    ayudaMensaje.textContent = "Cuéntanos en qué te podemos ayudar.";
+});
